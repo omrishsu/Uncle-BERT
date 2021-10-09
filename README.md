@@ -4,12 +4,14 @@ This repository contains code and models for the paper: [Question Answering with
 ![Model Framework](gen_arch.png)
 
 ## Data Preprocessing (Gen-SQuAD)
-First you need to have a some GEDCOM files (.ged).
+1) you need to have some GEDCOM files (.ged).
 
-The code to convert GEDCOM files to the Gen-SQuAD dataset will be released after the paper's approval.
+2) you can split the GEDCOM files into sub-graphs using the ged-bfs algorithm (C# pseudo code).
+
+3) the rest of the code to convert GEDCOM files to the Gen-SQuAD dataset will be released after the paper's approval.
 
 ## Fine tuning (Uncle-BERT)
-Trainig script can be found on training\train_eval_script.py
+Trainig script can be found on training\train_eval_script.py (python)
 ### Usage
 
 ```

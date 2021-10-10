@@ -11,7 +11,7 @@ This repository contains code and models for the paper: [Question Answering with
 3) the rest of the code to convert GEDCOM files to the Gen-SQuAD dataset will be released after the paper's approval.
 
 ## Fine tuning (Uncle-BERT)
-Trainig script can be found on training\train_eval_script.py (python)
+Trainig script can be found in [training\train_eval_script.py (python)](https://github.com/omrivm/Uncle-BERT/blob/main/training/train_eval_script.py)
 ### Usage
 
 ```

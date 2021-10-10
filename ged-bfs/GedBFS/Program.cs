@@ -1,4 +1,7 @@
-﻿using System;
+﻿
+// Toy example of the GEN-BFS (algorithm 1 in the paper)
+// you should fit it to the gedcom parsing library that you use
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,6 +11,7 @@ namespace GedBFS
 {
     class Program
     {
+        // GEDCOM abstract object
         public abstract class GenObject
         {
             public string name { get; }
@@ -22,6 +26,8 @@ namespace GedBFS
                 return name;
             }
         }
+        
+        // GEDCOM individual object
         public class Person : GenObject
         {
             public Person(string name) :base(name) { }
@@ -56,6 +62,7 @@ namespace GedBFS
             }
         }
 
+        // GEDCOM family object
         public class Family : GenObject
         {
             public Family(string name) : base(name) { }
@@ -92,7 +99,8 @@ namespace GedBFS
 
         public class BreadthFirstAlgorithm
         {
-            public Person BuildEmployeeGraph()
+            // Toy example
+            public Person BuildGraph()
             {
                 var sp = new Person("SP");
 
@@ -153,6 +161,8 @@ namespace GedBFS
 
                 return sp;
             }
+            
+            // BFS algorithm
             public void Traverse(GenObject parent, int maxDepth)
             {
                 var nodeQueue = new Queue<GenObject>();
@@ -203,7 +213,7 @@ namespace GedBFS
                 }
             }
 
-
+            // GEN-BFS algorithm
             public Queue<Tuple<int, GenObject>> GenTraverse(GenObject parent, int maxDepth)
             {
                 var nodeQueue = new Queue<GenObject>();
@@ -280,10 +290,11 @@ namespace GedBFS
             }
         }
 
+        // Test
         static void Main(string[] args)
         {
             BreadthFirstAlgorithm b = new BreadthFirstAlgorithm();
-            Person root = b.BuildEmployeeGraph();
+            Person root = b.BuildGraph();
             Console.WriteLine("Traverse Graph\n------");
             //            b.Traverse(root, 5);
 

@@ -4,7 +4,7 @@ This repository contains code and models for the paper: [Question Answering with
 ![Model Framework](gen_arch.png)
 
 ## Data Preprocessing (Gen-SQuAD)
-1) you need to have some GEDCOM files (.ged). We can not provide GEDCOM files due to privacy regualtions.
+1) you need to have some GEDCOM files (.ged). We cannot provide GEDCOM files due to privacy regulations.
 
 2) you can split the GEDCOM files into sub-graphs using the [ged-bfs algorithm (C# pseudo code)](https://github.com/omrivm/Uncle-BERT/blob/main/ged-bfs/GedBFS/Program.cs).
 

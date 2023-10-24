@@ -1,0 +1,8 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/.vs
+/ged-bfs/.vs/GedBFS/v16
+/ged-bfs/GedBFS/bin/Debug
+/ged-bfs/GedBFS/obj/Debug
